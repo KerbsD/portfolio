@@ -15,10 +15,16 @@ function setupTextHover(
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
   const animateLetter = (letter: Element, weight: number, duration = 0.25) => {
-    return gsap.to(letter, {
+    const el = letter as HTMLElement;
+    const proxy = { weight: parseFloat(el.style.fontWeight || String(base)) };
+  
+    return gsap.to(proxy, {
+      weight,
       duration,
       ease: "power2.out",
-      fontVariationSettings: `wght ${weight}`,
+      onUpdate: () => {
+        el.style.fontWeight = String(Math.round(proxy.weight));
+      },
     });
   };
 

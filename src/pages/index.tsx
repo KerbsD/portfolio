@@ -1,11 +1,11 @@
 import Navbar from "@/modules/Navbar/Navbar";
-// import Welcome from "@/modules/Welcome/Welcome";
+import Welcome from "@/modules/Welcome/Welcome";
 
 function index() {
   return (
     <main>
       <Navbar />
-      {/* <Welcome /> */}
+      <Welcome />
     </main>
   );
 }

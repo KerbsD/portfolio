@@ -13,6 +13,10 @@ body {
   background-position: center;
 }
 
+span {
+  font-weight: calc(var(--weight) * 1);
+}
+
 @theme {
   --font-georama: "Georama", sans-serif;
   --font-roboto: "Roboto Mono", monospace;
