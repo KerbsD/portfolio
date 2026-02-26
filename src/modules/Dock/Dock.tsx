@@ -1,12 +1,13 @@
-import { useRef } from "react";
 import { dockApps } from "@/constants";
+import useDock from "./useDock";
+import { Tooltip } from "react-tooltip";
 
 function Dock() {
-  const dockRef = useRef<HTMLDivElement>(null);
+  const { toggleApp, dockRef } = useDock();
 
   return (
     <section id="dock">
-      <div ref={dockRef}>
+      <div ref={dockRef} className="dock-container">
         {dockApps.map(({ id, name, icon, canOpen }) => (
           <div key={id} className="relative flex justify-center">
             <button
@@ -17,10 +18,19 @@ function Dock() {
               data-tooltip-content={name}
               data-tooltip-delay-show={150}
               disabled={!canOpen}
-              onClick={() => {}}
-            ></button>
+              onClick={() => toggleApp({ id, canOpen })}
+            >
+              <img
+                src={`/images/${icon}`}
+                alt={name}
+                loading="lazy"
+                className={canOpen ? "" : "opacity-60"}
+              />
+            </button>
           </div>
         ))}
+
+        <Tooltip id="dock-tooltip" place="top" className="tooltip" />
       </div>
     </section>
   );
