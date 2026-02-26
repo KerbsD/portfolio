@@ -2,7 +2,10 @@ import { dockApps } from "@/constants";
 import useDock from "./useDock";
 import { Tooltip } from "react-tooltip";
 
+
 function Dock() {
+
+
   const { toggleApp, dockRef } = useDock();
 
   return (
