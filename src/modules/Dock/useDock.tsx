@@ -18,8 +18,6 @@ function useDock() {
     } else {
       openWindow(app.id);
     }
-
-    console.log(windows);
   };
 
   useGSAP(() => {
