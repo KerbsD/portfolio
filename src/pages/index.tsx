@@ -2,7 +2,7 @@ import Navbar from "@/modules/Navbar/Navbar";
 // import Welcome from "@/modules/Welcome/Welcome";
 import Dock from "@/modules/Dock/Dock";
 
-import { Terminal, Safari, Resume } from "@/windows";
+import { Terminal, Safari, Resume, Finder } from "@/windows";
 
 function index() {
   return (
@@ -14,6 +14,7 @@ function index() {
       <Terminal />
       <Safari />
       <Resume />
+      <Finder />
     </main>
   );
 }
