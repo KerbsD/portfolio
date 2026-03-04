@@ -13,7 +13,11 @@ const Home = () => {
         {projects.map((project) => (
           <li
             key={project.id}
-            className={clsx("groupd folder", project.windowPosition)}
+            data-id={project.id}
+            className={clsx(
+              "group folder",
+              "windowPosition" in project ? project.windowPosition : "",
+            )}
             onClick={() => handleOpenFolder(project)}
           >
             <img src="/images/folder.png" alt={project.name} />
