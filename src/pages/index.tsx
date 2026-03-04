@@ -1,6 +1,7 @@
 import Navbar from "@/modules/Navbar/Navbar";
 // import Welcome from "@/modules/Welcome/Welcome";
 import Dock from "@/modules/Dock/Dock";
+import Home from "@/modules/Home/Home";
 
 import {
   Terminal,
@@ -26,6 +27,8 @@ function index() {
       <Text />
       <Image />
       <Contact />
+
+      <Home />
     </main>
   );
 }
