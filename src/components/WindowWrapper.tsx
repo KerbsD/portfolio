@@ -3,12 +3,12 @@ import gsap from "gsap";
 import { Draggable } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 
-import { WINDOW_CONFIG } from "@/constants";
+import { type WindowConfig } from "@/constants";
 import useWindowStore from "@/store/windows";
 
 function WindowWrapper(
   Component: ComponentType,
-  windowKey: keyof typeof WINDOW_CONFIG
+  windowKey: keyof WindowConfig
 ) {
   const Wrapped = (props: any) => {
     const { focusWindow, windows } = useWindowStore();

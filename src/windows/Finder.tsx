@@ -25,6 +25,8 @@ const Finder = () => {
       typeof item.href === "string"
     )
       return window.open(item.href, "_blank");
+
+    openWindow(`${"fileType" in item && item.fileType}${item.kind}`, item);
   };
 
   const renderList = (name: string, items: AnyLocation[]) => {

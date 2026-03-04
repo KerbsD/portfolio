@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
-import { WINDOW_CONFIG, INITIAL_Z_INDEX } from "@/constants";
+import { WINDOW_CONFIG, INITIAL_Z_INDEX, type WindowConfig } from "@/constants";
 
 type WindowState = {
-  windows: typeof WINDOW_CONFIG;
+  windows: WindowConfig;
   nextZindex: number;
 };
 

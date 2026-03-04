@@ -492,7 +492,36 @@ export const locations = {
 
 const INITIAL_Z_INDEX = 1000;
 
-const WINDOW_CONFIG = {
+export type TxtFileData = {
+  name: string;
+  subtitle?: string;
+  image?: string;
+  description?: string | string[];
+};
+
+export type ImgFileData = {
+  name: string;
+  imageUrl: string;
+};
+
+export type WindowEntry<TData = unknown> = {
+  isOpen: boolean;
+  zIndex: number;
+  data: TData | null;
+};
+
+export type WindowConfig = {
+  finder: WindowEntry;
+  contact: WindowEntry;
+  resume: WindowEntry;
+  safari: WindowEntry;
+  photos: WindowEntry;
+  terminal: WindowEntry;
+  txtfile: WindowEntry<TxtFileData>;
+  imgfile: WindowEntry<ImgFileData>;
+};
+
+const WINDOW_CONFIG: WindowConfig = {
   finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
