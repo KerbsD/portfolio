@@ -61,7 +61,7 @@ const Finder = () => {
         <div className="sidebar">
           {[
             { name: "Favorites", items: Object.values(locations) },
-            { name: "Works", items: locations.work.children },
+            { name: "Projects", items: locations.work.children },
           ].map(({ name, items }) => renderList(name, items))}
         </div>
 

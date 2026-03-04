@@ -1,4 +1,4 @@
-import { ComponentType, useRef, useLayoutEffect } from "react";
+import { ComponentType, useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
 import { useGSAP } from "@gsap/react";
@@ -8,12 +8,30 @@ import useWindowStore from "@/store/windows";
 
 function WindowWrapper(
   Component: ComponentType,
-  windowKey: keyof WindowConfig
+  windowKey: keyof WindowConfig,
 ) {
   const Wrapped = (props: any) => {
-    const { focusWindow, windows } = useWindowStore();
+    const { focusWindow, windows, closeWindow } = useWindowStore();
     const { isOpen, zIndex } = windows[windowKey];
     const ref = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+      if (!isOpen) return;
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        const isFocused =
+          windows[windowKey].zIndex ===
+          Math.max(...Object.values(windows).map((w) => w.zIndex));
+
+        if (e.key === "Escape" && isFocused) {
+          e.preventDefault();
+          closeWindow(windowKey);
+        }
+      };
+
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [isOpen, zIndex, windows]);
 
     useGSAP(() => {
       const el = ref.current;
@@ -25,7 +43,7 @@ function WindowWrapper(
       gsap.fromTo(
         el,
         { scale: 0.8, opacity: 0, y: 40 },
-        { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }
+        { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: "power3.out" },
       );
     }, [isOpen]);
 
@@ -35,6 +53,8 @@ function WindowWrapper(
       if (!el) return;
 
       const [instance] = Draggable.create(el, {
+        cursor: "pointer", // cursor when hovering
+        activeCursor: "grabbing", // cursor while dragging
         onPress: () => focusWindow(windowKey),
       });
 
