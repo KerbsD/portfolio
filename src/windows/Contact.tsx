@@ -12,7 +12,7 @@ function Contact() {
 
       <div className="p-5 space-y-5">
         <img
-          src="/images/adrian.jpg"
+          src="/images/kirby.jpg"
           alt="Adrian"
           className="w-20 rounded-full"
         />
@@ -20,7 +20,7 @@ function Contact() {
         <h3>Let's Connect</h3>
         <p>
           I'm always looking for new opportunities and collaborations. Feel free
-          to contact me via email or social media.
+          to contact me via email or social media.image.png
         </p>
 
         <ul>
