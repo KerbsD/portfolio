@@ -6,7 +6,7 @@ function Welcome() {
 
   return (
     <section id="welcome">
-      <p ref={subtitleRef}>
+      {/* <p ref={subtitleRef}>
         {renderText(
           "Hey, I'm Kirby!, Welcome to my",
           "text-3xl font-georama",
@@ -15,9 +15,18 @@ function Welcome() {
       </p>
       <h1 ref={titleRef} className="mt-7">
         {renderText("portfolio", "text-9xl italic font-georama")}
-      </h1>
+      </h1> */}
 
-      <div className="small-screen"></div>
+      <div className="small-screen">
+        <p>
+          To experience the beauty of my portfolio, consider switching to
+          desktop
+        </p>
+        <p>
+          I can create responsive websites, but this portfolio mimics a MacOS so
+          I solely focus on desktop
+        </p>
+      </div>
     </section>
   );
 }

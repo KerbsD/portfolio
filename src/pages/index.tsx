@@ -1,5 +1,5 @@
 import Navbar from "@/modules/Navbar/Navbar";
-// import Welcome from "@/modules/Welcome/Welcome";
+import Welcome from "@/modules/Welcome/Welcome";
 import Dock from "@/modules/Dock/Dock";
 import Home from "@/modules/Home/Home";
 
@@ -17,7 +17,7 @@ function index() {
   return (
     <main>
       <Navbar />
-      {/* <Welcome /> */}
+      <Welcome />
       <Dock />
 
       <Terminal />

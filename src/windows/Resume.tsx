@@ -26,7 +26,7 @@ function Resume() {
         </a>
       </div>
 
-      <PdfViewer fileName="files/Resume - Rivera, Michael Kirby B..pdf" />
+      <PdfViewer fileName="files/Resume - Rivera, Michael Kirby B.pdf" />
     </>
   );
 }
