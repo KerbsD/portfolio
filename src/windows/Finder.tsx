@@ -31,7 +31,7 @@ const Finder = () => {
 
   const renderList = (name: string, items: AnyLocation[]) => {
     return (
-      <div>
+      <div key={name}>
         <h3>{name}</h3>
         <ul>
           {items.map((item) => (

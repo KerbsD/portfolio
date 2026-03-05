@@ -6,7 +6,7 @@ function Terminal() {
   return (
     <>
       <div id="window-header">
-        <WindowControl target="terminal"/>
+        <WindowControl target="terminal" />
         <h1>Tech Stack</h1>
       </div>
 
@@ -23,7 +23,7 @@ function Terminal() {
 
         <ul className="content">
           {techStack.map(({ category, items }) => (
-            <li className="flex items-center">
+            <li key={category} className="flex items-center">
               <h3>{category}</h3>
               <ul>
                 {items.map((item, i) => (

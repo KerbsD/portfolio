@@ -15,7 +15,7 @@ const Home = () => {
             key={project.id}
             data-id={project.id}
             className={clsx(
-              "group folder",
+              "group folder invisible",
               "windowPosition" in project ? project.windowPosition : "",
             )}
             onClick={() => handleOpenFolder(project)}

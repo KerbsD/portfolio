@@ -37,11 +37,19 @@ function useAnimateHome() {
   useGSAP(() => {
     // Restore saved positions first
     const saved = getSavedPositions();
-    document.querySelectorAll<HTMLElement>(".folder").forEach((el) => {
+    const folders = document.querySelectorAll<HTMLElement>(".folder");
+
+    folders.forEach((el) => {
       const id = el.dataset.id;
       if (id && saved[id]) {
         gsap.set(el, { x: saved[id].x, y: saved[id].y });
       }
+    });
+
+    gsap.to(".folder", {
+      autoAlpha: 1,
+      duration: 0.4,
+      ease: "power3.out",
     });
 
     // Create draggables

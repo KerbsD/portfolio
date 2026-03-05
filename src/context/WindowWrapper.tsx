@@ -70,7 +70,12 @@ function WindowWrapper(
     }, [isOpen]);
 
     return (
-      <section ref={ref} id={windowKey} style={{ zIndex }} className="absolute">
+      <section
+        ref={ref}
+        id={windowKey}
+        style={{ zIndex, display: isOpen ? "block" : "none" }}
+        className="absolute"
+      >
         <Component {...props} />
       </section>
     );

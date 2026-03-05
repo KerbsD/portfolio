@@ -21,6 +21,7 @@ const useWindowStore = create<WindowStore>()(
     openWindow: (windowKey: string, data = null) =>
       set((state) => {
         const win = state.windows[windowKey as keyof typeof state.windows];
+        if (!win) return;
         win.isOpen = true;
         win.zIndex = state.nextZindex;
         win.data = (data ?? win.data) as typeof win.data;
@@ -38,7 +39,7 @@ const useWindowStore = create<WindowStore>()(
         const win = state.windows[windowKey as keyof typeof state.windows];
         win.zIndex = state.nextZindex++;
       }),
-  }))
+  })),
 );
 
 export default useWindowStore;
