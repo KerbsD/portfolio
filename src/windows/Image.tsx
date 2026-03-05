@@ -1,5 +1,5 @@
 import WindowControl from "@/components/WindowControl";
-import WindowWrapper from "@/components/WindowWrapper";
+import WindowWrapper from "@/context/WindowWrapper";
 import useWindowStore from "@/store/windows";
 
 function Image() {

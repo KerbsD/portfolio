@@ -53,8 +53,8 @@ function WindowWrapper(
       if (!el) return;
 
       const [instance] = Draggable.create(el, {
-        cursor: "pointer", // cursor when hovering
-        activeCursor: "grabbing", // cursor while dragging
+        cursor: "pointer",
+        activeCursor: "grabbing",
         onPress: () => focusWindow(windowKey),
       });
 

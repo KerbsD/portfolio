@@ -1,5 +1,5 @@
 import WindowControl from "@/components/WindowControl";
-import WindowWrapper from "@/components/WindowWrapper";
+import WindowWrapper from "@/context/WindowWrapper";
 import { blogPosts } from "@/constants";
 import {
   PanelLeft,

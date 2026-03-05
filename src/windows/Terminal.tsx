@@ -1,4 +1,4 @@
-import WindowWrapper from "@/components/WindowWrapper";
+import WindowWrapper from "@/context/WindowWrapper";
 import { techStack } from "@/constants";
 import WindowControl from "@/components/WindowControl";
 

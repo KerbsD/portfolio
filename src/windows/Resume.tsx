@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 import WindowControl from "@/components/WindowControl";
-import WindowWrapper from "@/components/WindowWrapper";
+import WindowWrapper from "@/context/WindowWrapper";
 import { Download } from "lucide-react";
 
 const PdfViewer = dynamic(() => import("@/components/PdfViewer"), {

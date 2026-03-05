@@ -1,5 +1,5 @@
 import WindowControl from "@/components/WindowControl";
-import WindowWrapper from "@/components/WindowWrapper";
+import WindowWrapper from "@/context/WindowWrapper";
 import useLocationStore, { AnyLocation, AnyChildren } from "@/store/location";
 import useWindowStore from "@/store/windows";
 
