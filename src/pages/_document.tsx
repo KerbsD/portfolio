@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
        <Head>
-        <link rel="icon" href="/icons/macos-icon.svg" />
+        <link rel="icon" href="/icons/finder.png" />
       </Head>
       <body className="antialiased">
         <Main />

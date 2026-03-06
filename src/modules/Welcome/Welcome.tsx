@@ -20,7 +20,8 @@ function Welcome() {
       <div className="small-screen">
         <p>
           To experience the beauty of my portfolio, consider switching to
-          desktop
+          desktop. (But you can make your phone's browser into Desktop mode! To
+          still experience my portfolio)
         </p>
         <p>
           I can create responsive websites, but this portfolio mimics a MacOS so

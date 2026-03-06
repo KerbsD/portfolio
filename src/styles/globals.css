@@ -7,6 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
+  position: relative;
   background-image: url("/images/pokemon-wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,10 +77,10 @@ span {
     @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
 
     .small-screen {
-      @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
+      @apply sm:hidden m-7 bg-slate-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
 
       p {
-        @apply flex-1 text-[16px] text-center font-roboto text-gray-400;
+        @apply flex-1 text-[16px] text-center font-roboto text-slate-950;
       }
     }
   }
@@ -170,7 +171,7 @@ span {
         @apply flex flex-col items-center justify-center h-full gap-3 py-16 select-none;
 
         svg {
-          @apply size-16 text-gray-300 mb-2
+          @apply size-16 text-gray-300 mb-2;
         }
 
         h3 {
@@ -181,7 +182,7 @@ span {
           @apply text-gray-400 text-sm text-center max-w-xs leading-relaxed;
 
           span {
-            @apply text-pink-400
+            @apply text-pink-400;
           }
         }
       }
@@ -333,7 +334,7 @@ span {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl h-[40vh];
+    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl h-[50dvh];
 
     .sidebar {
       @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
