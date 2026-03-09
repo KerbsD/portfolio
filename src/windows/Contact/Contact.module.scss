@@ -1,7 +1,7 @@
 @reference "../../styles/globals.css";
 
 .contact {
-    @apply max-w-2xl absolute top-60 left-23 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-2xl absolute bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;

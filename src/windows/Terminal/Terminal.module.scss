@@ -1,7 +1,7 @@
 @reference "../../styles/globals.css";
 
 .terminal {
-    @apply w-xl absolute top-32 left-78 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;

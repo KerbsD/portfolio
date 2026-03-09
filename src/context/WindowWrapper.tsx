@@ -72,6 +72,7 @@ function WindowWrapper(
     return (
       <section
         ref={ref}
+        id={windowKey}
         style={{ zIndex, display: isOpen ? "block" : "none" }}
         className="absolute"
       >
