@@ -1,3 +1,4 @@
+import Image from "next/image";
 import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import useWindowStore from "@/store/windows";
@@ -22,7 +23,13 @@ function Text() {
       <div className="p-5 space-y-6 bg-white">
         {image && (
           <div className="w-full">
-            <img src={image} alt={name} className="w-full h-auto rounded" />
+            <Image
+              width={1000}
+              height={1000}
+              src={image}
+              alt={name}
+              className="w-full h-auto rounded"
+            />
           </div>
         )}
 

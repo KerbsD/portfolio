@@ -6,11 +6,11 @@ import { useGSAP } from "@gsap/react";
 import { type WindowConfig } from "@/constants";
 import useWindowStore from "@/store/windows";
 
-function WindowWrapper(
-  Component: ComponentType,
+function WindowWrapper<P extends object>(
+  Component: ComponentType<P>,
   windowKey: keyof WindowConfig,
 ) {
-  const Wrapped = (props: any) => {
+  const Wrapped = (props: P) => {
     const { focusWindow, windows, closeWindow } = useWindowStore();
     const { isOpen, zIndex } = windows[windowKey];
     const ref = useRef<HTMLElement>(null);
@@ -31,7 +31,7 @@ function WindowWrapper(
 
       window.addEventListener("keydown", handleKeyDown);
       return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [isOpen, zIndex, windows]);
+    }, [isOpen, zIndex, windows, closeWindow]);
 
     useGSAP(() => {
       const el = ref.current;

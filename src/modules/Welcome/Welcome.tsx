@@ -1,27 +1,25 @@
-import useAnimateWelcome from "./useAnimateWelcome";
-// import renderText from "@/utils/RenderText";
 import styles from "./Welcome.module.scss";
 
 function Welcome() {
-  const { titleRef, subtitleRef } = useAnimateWelcome();
-
   return (
     <section id="welcome" className={styles["welcome"]}>
-      {/* <p ref={subtitleRef}>
-        {renderText(
-          "Hey, I'm Kirby!, Welcome to my",
-          "text-3xl font-georama",
-          100
-        )}
-      </p>
-      <h1 ref={titleRef} className="mt-7">
-        {renderText("portfolio", "text-9xl italic font-georama")}
-      </h1> */}
+      <div className={styles["sticky-note"]}>
+        <h4>KerbsDev Portfolio</h4>
+        <p>
+          This portfolio simulates <b>macOS</b> experience. You can —{" "}
+          <b>drag</b> each application windows, focus on it, and <b>close</b>{" "}
+          with (
+          <i>
+            <b>&apos;Escape&apos;</b> or the red traffic light
+          </i>
+          ).
+        </p>
+      </div>
 
       <div className={styles["small-screen"]}>
         <p>
           To experience the beauty of my portfolio, consider switching to
-          desktop. (But you can make your phone's browser into Desktop mode! To
+          desktop. (But you can make your phone&apos;s browser into Desktop mode! To
           still experience my portfolio)
         </p>
         <p>

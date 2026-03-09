@@ -70,6 +70,10 @@ span {
   #resume {
     @apply -top-7 left-8/12
   }
+
+  #txtfile {
+    @apply -top-40 left-1/12
+  }
 }
 
 /* @layer components {

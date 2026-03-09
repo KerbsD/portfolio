@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { locations } from "@/constants";
 import clsx from "clsx";
 import useAnimateHome from "./useAnimateHome";
@@ -21,7 +22,7 @@ const Home = () => {
             )}
             onClick={() => handleOpenFolder(project)}
           >
-            <img src="/images/folder.png" alt={project.name} />
+            <Image src="/images/folder.png" width={75} height={75} alt={project.name} />
             <p>{project.name}</p>
           </li>
         ))}

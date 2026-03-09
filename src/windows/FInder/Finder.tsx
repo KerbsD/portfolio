@@ -1,3 +1,4 @@
+import Image from "next/image";
 import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import useLocationStore, { AnyLocation, AnyChildren } from "@/store/location";
@@ -46,7 +47,7 @@ const Finder = () => {
                   : `${styles["not-active"]}`,
               )}
             >
-              <img src={item.icon} alt={item.name} className="w-4" />
+              <Image width={30} height={30} src={item.icon} alt={item.name} className="w-4" />
               <p className="text-sm font-medium truncate">{item.name}</p>
             </li>
           ))}
@@ -79,7 +80,7 @@ const Finder = () => {
                 className={"position" in item ? item.position : undefined}
                 onClick={() => openItem(item)}
               >
-                <img src={item.icon} alt={item.name} />
+                <Image width={40} height={40} src={item.icon} alt={item.name} />
                 <p>{item.name}</p>
               </li>
             ))}

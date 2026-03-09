@@ -1,13 +1,59 @@
 @reference "../../styles/globals.css";
 
 .welcome {
-  @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+  @apply select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
 
   .small-screen {
-    @apply sm:hidden m-7 bg-slate-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
+    @apply sm:hidden m-7 bg-slate-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10 mx-auto;
 
     p {
       @apply flex-1 text-[16px] font-roboto text-center text-slate-950;
+    }
+  }
+
+  .sticky-note {
+    @apply w-[30vw] top-20 right-25 absolute min-h-40 rounded-sm pt-9 px-4 pb-4 text-slate-900 z-1000 hidden sm:block;
+
+    background: #fef08a;
+    background-image: linear-gradient(
+      180deg,
+      #4762fd 0px,
+      #4796fd 28px,
+      #8aaffe 28px
+    );
+    box-shadow:
+      2px 3px 6px rgba(0, 0, 0, 0.18),
+      4px 6px 16px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      @apply absolute left-0 right-0 bottom-0 pointer-events-none;
+      content: "";
+      top: 44px;
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 19px,
+        rgba(180, 150, 0, 0.18) 19px,
+        rgba(180, 150, 0, 0.18) 20px
+      );
+    }
+
+    &::after {
+      @apply absolute bottom-0 right-0 rounded-tl-none rounded-br-sm;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(
+        225deg,
+        #006be5 45%,
+        #8abcfe 50%,
+        rgba(0, 0, 0, 0.08) 100%
+      );
+    }
+
+    h4 {
+      @apply text-lg leading-5 relative z-10 mb-3 font-bold;
+      color: #1d0f03;
     }
   }
 }

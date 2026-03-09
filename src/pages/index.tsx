@@ -10,7 +10,7 @@ import {
   Resume,
   Finder,
   Text,
-  Image,
+  ImageViewer,
   Contact,
 } from "@/windows";
 
@@ -26,7 +26,7 @@ function index() {
       <Safari />
       <Resume />
       <Finder />
-      <Image />
+      <ImageViewer />
       <Contact />
       <Text />
       <Home />

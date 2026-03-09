@@ -1,9 +1,10 @@
+import Image from "next/image";
 import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import useWindowStore from "@/store/windows";
 import styles from "./Image.module.scss";
 
-function Image() {
+function ImageViewer() {
   const { windows } = useWindowStore();
   const data = windows.imgfile.data;
 
@@ -20,7 +21,9 @@ function Image() {
       <div className="p-5 bg-white">
         {imageUrl && (
           <div className="w-full">
-            <img
+            <Image
+              width={1000}
+              height={1000}
               src={imageUrl}
               alt={name}
               className="w-full h-auto max-h-[70vh] object-contain rounded"
@@ -32,4 +35,4 @@ function Image() {
   );
 }
 
-export default WindowWrapper(Image, "imgfile");
+export default WindowWrapper(ImageViewer, "imgfile");

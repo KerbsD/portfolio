@@ -5,14 +5,19 @@ import useWindowStore from "@/store/windows";
 import { type WindowConfig } from "@/constants";
 import styles from "./Dock.module.scss";
 
+type DockApp = {
+  id: keyof WindowConfig | string;
+  canOpen: boolean;
+};
+
 function useDock() {
   const dockRef = useRef<HTMLDivElement>(null);
   const { openWindow, closeWindow, windows } = useWindowStore();
 
-  const toggleApp = (app: any) => {
+  const toggleApp = (app: DockApp) => {
     if (!app.canOpen) return;
 
-    const window = windows[app.id as keyof WindowConfig];
+      const window = windows[app.id as keyof WindowConfig];
 
     if (window.isOpen) {
       closeWindow(app.id);
@@ -28,7 +33,7 @@ function useDock() {
 
     const icons = dock?.querySelectorAll(`.${styles["dock-icon"]}`);
 
-    const animateIcons = (mouseX: any) => {
+    const animateIcons = (mouseX: number) => {
       const { left } = dock.getBoundingClientRect();
 
       icons.forEach((icon) => {

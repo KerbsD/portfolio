@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { dockApps } from "@/constants";
 import useDock from "./useDock";
 import { Tooltip } from "react-tooltip";
@@ -21,10 +22,10 @@ function Dock() {
               disabled={!canOpen}
               onClick={() => toggleApp({ id, canOpen })}
             >
-              <img
+              <Image
                 src={`/images/${icon}`}
                 alt={name}
-                loading="lazy"
+                fill
                 className={canOpen ? "" : "opacity-60"}
               />
             </button>

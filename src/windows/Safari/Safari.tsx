@@ -1,3 +1,4 @@
+import Image from "next/image";
 import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import { blogPosts } from "@/constants";
@@ -56,7 +57,7 @@ function Safari() {
             blogPosts.map(({ id, image, title, date, link }) => (
               <div key={id} className={styles["blog-post"]}>
                 <div className="col-span-2">
-                  <img src={image} alt={title} />
+                  <Image width={100} height={100} src={image} alt={title} />
                 </div>
 
                 <div className={styles["content"]}>

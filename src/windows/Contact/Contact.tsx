@@ -1,3 +1,4 @@
+import Image from "next/image";
 import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import { socials } from "@/constants";
@@ -12,15 +13,17 @@ function Contact() {
       </div>
 
       <div className="p-5 space-y-5">
-        <img
+        <Image
           src="/images/kirby.jpg"
           alt="Adrian"
+          width={100}
+          height={100}
           className="w-20 rounded-full"
         />
 
-        <h3>Let's Connect</h3>
+        <h3>Let&apos;s Connect</h3>
         <p>
-          I'm always looking for new opportunities and collaborations. Feel free
+          I&apos;m always looking for new opportunities and collaborations. Feel free
           to contact me via email or social media.image.png
         </p>
 
@@ -33,7 +36,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 title={text}
               >
-                <img src={icon} alt={text} className="size-5" />
+                <Image src={icon} alt={text} width={25} height={25} className="size-5" />
                 <p>{text}</p>
               </a>
             </li>
