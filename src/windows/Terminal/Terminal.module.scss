@@ -1,47 +1,55 @@
 @reference "../../styles/globals.css";
 
 .terminal {
-    @apply w-xl absolute bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+  @apply w-xl absolute bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
-    h2 {
-      @apply font-bold text-sm text-center w-full;
+  .headers {
+    @apply opacity-0;
+
+    .cursor {
+      @apply inline-block w-[0.55em] h-[1em] bg-[currentColor] ml-[2px] align-text-bottom;
+    }
+  }
+
+  h1 {
+    @apply font-bold text-sm text-center w-full;
+  }
+
+  .techstack {
+    @apply text-sm font-roboto p-5;
+
+    .label {
+      @apply flex items-center ms-10 mt-7 opacity-0;
     }
 
-    .techstack {
-      @apply text-sm font-roboto p-5;
+    .content {
+      @apply py-5 my-5 border-y border-dashed space-y-1;
 
-      .label {
-        @apply flex items-center ms-10 mt-7;
-      }
+      li {
+        .check {
+          @apply text-[#00A154] w-5 opacity-0;
+        }
 
-      .content {
-        @apply py-5 my-5 border-y border-dashed space-y-1;
+        h3 {
+          @apply font-semibold text-[#00A154] w-32 ms-5;
+        }
 
-        li {
-          .check {
-            @apply text-[#00A154] w-5;
-          }
-
-          h3 {
-            @apply font-semibold text-[#00A154] w-32 ms-5;
-          }
-
-          ul {
-            @apply flex items-center gap-3;
-          }
+        ul {
+          @apply flex items-center gap-3;
         }
       }
+    }
 
-      .footnote {
-        @apply text-[#00A154] space-y-1;
+    .footnote {
+      @apply text-[#00A154] space-y-1 opacity-0;
 
-        p {
-          @apply flex items-center;
+      p {
+        @apply flex items-center;
 
-          svg {
-            @apply w-5 me-5;
-          }
+        svg {
+          @apply w-5 me-5;
         }
       }
     }
   }
+}

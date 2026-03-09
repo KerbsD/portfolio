@@ -17,7 +17,7 @@ import {
 function index() {
   return (
     <main>
-      <LoadingScreen />
+      {/* <LoadingScreen /> */}
       <Navbar />
       <Welcome />
       <Dock />
