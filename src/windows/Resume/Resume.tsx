@@ -1,8 +1,10 @@
 import dynamic from "next/dynamic";
 
-import WindowControl from "@/components/WindowControl";
+import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import { Download } from "lucide-react";
+
+import styles from "./Resume.module.scss";
 
 const PdfViewer = dynamic(() => import("@/components/PdfViewer"), {
   ssr: false,
@@ -11,10 +13,10 @@ const PdfViewer = dynamic(() => import("@/components/PdfViewer"), {
 
 function Resume() {
   return (
-    <>
-      <div id="window-header">
+    <div className={styles["resume"]}>
+      <div className="window-header">
         <WindowControl target="resume" />
-        <h2>Resume.pdf</h2>
+        <h2 className="font-bold text-sm text-center flex-1">Resume.pdf</h2>
 
         <a
           href="files/Resume - RIVERA, MICHAEL KIRBY B"
@@ -27,7 +29,7 @@ function Resume() {
       </div>
 
       <PdfViewer fileName="files/Resume - Rivera, Michael Kirby B.pdf" />
-    </>
+    </div>
   );
 }
 

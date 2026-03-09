@@ -1,11 +1,12 @@
-import WindowControl from "@/components/WindowControl";
+import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import { socials } from "@/constants";
+import styles from "./Contact.module.scss";
 
 function Contact() {
   return (
-    <>
-      <div id="window-header">
+    <div className={styles["contact"]}>
+      <div className="window-header">
         <WindowControl target="contact" />
         <h2>Contact Me</h2>
       </div>
@@ -39,7 +40,7 @@ function Contact() {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 

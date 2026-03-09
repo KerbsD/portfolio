@@ -1,0 +1,17 @@
+@reference "../../styles/globals.css";
+
+.window-controls {
+  @apply flex gap-2;
+
+  .close {
+    @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
+  }
+
+  .minimize {
+    @apply size-3.5 rounded-full bg-[#ffc030];
+  }
+
+  .maximize {
+    @apply size-3.5 rounded-full bg-[#2acb42];
+  }
+}

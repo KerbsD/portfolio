@@ -1,9 +1,9 @@
-import Terminal from "./Terminal";
-import Safari from "./Safari";
-import Resume from "./Resume";
-import Finder from "./Finder";
-import Text from "./Text";
-import Image from "./Image";
-import Contact from "./Contact";
+import Terminal from "./Terminal/Terminal";
+import Safari from "./Safari/Safari";
+import Resume from "./Resume/Resume";
+import Finder from "./FInder/Finder";
+import Text from "./Text/Text";
+import Image from "./Image/Image";
+import Contact from "./Contact/Contact";
 
 export { Terminal, Safari, Resume, Finder, Text, Image, Contact };

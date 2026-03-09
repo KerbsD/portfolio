@@ -2,6 +2,7 @@ import Navbar from "@/modules/Navbar/Navbar";
 import Welcome from "@/modules/Welcome/Welcome";
 import Dock from "@/modules/Dock/Dock";
 import Home from "@/modules/Home/Home";
+import LoadingScreen from "@/components/loading/LoadingScreen";
 
 import {
   Terminal,
@@ -16,6 +17,7 @@ import {
 function index() {
   return (
     <main>
+      {/* <LoadingScreen /> */}
       <Navbar />
       <Welcome />
       <Dock />
@@ -24,10 +26,9 @@ function index() {
       <Safari />
       <Resume />
       <Finder />
-      <Text />
       <Image />
       <Contact />
-
+      <Text />
       <Home />
     </main>
   );

@@ -4,6 +4,8 @@ import gsap from "gsap";
 import useWindowStore from "@/store/windows";
 import useLocationStore, { type AnyLocation } from "@/store/location";
 
+import styles from "./Home.module.scss";
+
 gsap.registerPlugin(Draggable, InertiaPlugin);
 
 const GRID_SIZE = 80;

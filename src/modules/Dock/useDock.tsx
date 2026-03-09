@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import useWindowStore from "@/store/windows";
 import { type WindowConfig } from "@/constants";
+import styles from "./Dock.module.scss";
 
 function useDock() {
   const dockRef = useRef<HTMLDivElement>(null);
@@ -25,7 +26,7 @@ function useDock() {
 
     if (!dock) return;
 
-    const icons = dock?.querySelectorAll(".dock-icon");
+    const icons = dock?.querySelectorAll(`.${styles["dock-icon"]}`);
 
     const animateIcons = (mouseX: any) => {
       const { left } = dock.getBoundingClientRect();

@@ -1,0 +1,52 @@
+@reference "tailwindcss";
+
+.loading-overlay {
+  @apply fixed inset-0 z-9999 flex flex-col items-center justify-center bg-black;
+}
+
+.radial-bg {
+  @apply absolute inset-0 pointer-events-none;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 50%,
+    #1a1a2e 0%,
+    #000 100%
+  );
+}
+
+.glow {
+  @apply absolute rounded-full pointer-events-none blur-[20px];
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+.logo-container {
+  @apply relative mb-12;
+}
+
+.progress-track {
+  @apply w-[200px] h-1 rounded overflow-hidden mb-4;
+  @apply bg-white/12;
+}
+
+.progress-bar {
+  @apply w-full h-full rounded;
+  @apply origin-left;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.95)
+  );
+}
+
+.status-text {
+  @apply text-white/45 text-xs tracking-wide mb-2 h-4;
+}
+
+.version-text {
+  @apply text-white/20 text-[11px] tracking-[0.06em];
+}

@@ -113,6 +113,10 @@ const techStack = [
     items: ["React.js", "Next.js", "TypeScript"],
   },
   {
+    category: "Animation",
+    items: ["GSAP"],
+  },
+  {
     category: "Mobile",
     items: ["React Native", "Expo"],
   },

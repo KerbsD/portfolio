@@ -1,13 +1,13 @@
-import dayjs from "dayjs";
 import { navLinks, navIcons } from "@/constants";
 import Clock from "@/components/Clock";
 import useWindowStore from "@/store/windows";
+import styles from "./Navbar.module.scss";
 
 function Navbar() {
   const { openWindow } = useWindowStore();
 
   return (
-    <nav>
+    <nav className={styles["navbar"]}>
       <div>
         <img src="/images/logo.svg" alt="apple-logo" />
         <p className="font-bold">Kirby's Portfolio</p>
@@ -25,7 +25,7 @@ function Navbar() {
         <ul>
           {navIcons.map(({ id, img }) => (
             <li key={id}>
-              <img src={img} alt="icon" className="icon-hover" />
+              <img src={img} alt="icon" className={styles["nav-icon"]} />
             </li>
           ))}
         </ul>

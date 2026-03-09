@@ -1,4 +1,4 @@
-import WindowControl from "@/components/WindowControl";
+import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import { blogPosts } from "@/constants";
 import {
@@ -13,10 +13,12 @@ import {
   MoveRight,
 } from "lucide-react";
 
+import styles from "./Safari.module.scss"
+
 function Safari() {
   return (
-    <>
-      <div id="window-header">
+    <div className={styles["safari"]}>
+      <div id="window-header" className="window-header">
         <WindowControl target="safari" />
 
         <PanelLeft className="ml-10 icon" />
@@ -29,7 +31,7 @@ function Safari() {
         <div className="flex-1 flex-center gap-3">
           <ShieldHalf className="icon" />
 
-          <div className="search">
+          <div className={styles["search"]}>
             <Search className="icon" />
             <input
               type="text"
@@ -46,18 +48,18 @@ function Safari() {
         </div>
       </div>
 
-      <div className="blog">
+      <div className={styles["blog"]}>
         {!blogPosts && <h2>My Developer Blog</h2>}
 
         <div className="space-y-8">
           {blogPosts.length > 0 ? (
             blogPosts.map(({ id, image, title, date, link }) => (
-              <div key={id} className="blog-post">
+              <div key={id} className={styles["blog-post"]}>
                 <div className="col-span-2">
                   <img src={image} alt={title} />
                 </div>
 
-                <div className="content">
+                <div className={styles["content"]}>
                   <p>{date}</p>
                   <h3>{title}</h3>
                   <a href={link} target="_blank" rel="noopener noreferrer">
@@ -67,7 +69,7 @@ function Safari() {
               </div>
             ))
           ) : (
-            <div className="empty-blog">
+            <div className={styles["empty-blog"]}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -90,7 +92,7 @@ function Safari() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

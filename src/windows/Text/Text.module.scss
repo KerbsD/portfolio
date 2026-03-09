@@ -1,0 +1,9 @@
+@reference "../../styles/globals.css";
+
+.txtfile {
+  @apply w-md absolute top-68 left-200  bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+  h2 {
+    @apply font-bold text-sm text-center w-full;
+  }
+}

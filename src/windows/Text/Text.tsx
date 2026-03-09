@@ -1,6 +1,7 @@
-import WindowControl from "@/components/WindowControl";
+import WindowControl from "@/components/window-control/WindowControl";
 import WindowWrapper from "@/context/WindowWrapper";
 import useWindowStore from "@/store/windows";
+import styles from "./Text.module.scss";
 
 function Text() {
   const { windows } = useWindowStore();
@@ -12,8 +13,8 @@ function Text() {
   const { name, image, subtitle, description } = data;
 
   return (
-    <>
-      <div id="window-header">
+    <section className={styles["txtfile"]}>
+      <div className="window-header">
         <WindowControl target="txtfile" />
         <h2>{name}</h2>
       </div>
@@ -26,18 +27,20 @@ function Text() {
         )}
 
         {subtitle && (
-          <h3 className="text-lg font-semibold text-gray-800">{subtitle}</h3>
+          <h3 className="text-lg font-semibold text-gray-900">{subtitle}</h3>
         )}
 
         {Array.isArray(description) && description.length > 0 && (
-            <div className="space-y-2">
-                {description.map((item, index) => (
-                    <p key={index} className="text-gray-600">{item}</p>
-                ))}
-            </div>
+          <div className="space-y-2">
+            {description.map((item, index) => (
+              <p key={index} className="text-gray-900">
+                {item}
+              </p>
+            ))}
+          </div>
         )}
       </div>
-    </>
+    </section>
   );
 }
 
