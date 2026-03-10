@@ -19,7 +19,7 @@ function Resume() {
         <h2 className="font-bold text-sm text-center flex-1">Resume.pdf</h2>
 
         <a
-          href="files/Resume - RIVERA, MICHAEL KIRBY B"
+          href="files/Resume - Rivera, Michael Kirby B.pdf"
           download
           className="cursor-pointer"
           title="Download resume"
