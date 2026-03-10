@@ -19,7 +19,7 @@ function Resume() {
         <h2 className="font-bold text-sm text-center flex-1">Resume.pdf</h2>
 
         <a
-          href="files/Resume - Rivera, Michael Kirby B.pdf"
+          href="files/resume.pdf"
           download
           className="cursor-pointer"
           title="Download resume"
@@ -28,7 +28,7 @@ function Resume() {
         </a>
       </div>
 
-      <PdfViewer fileName="files/Resume - Rivera, Michael Kirby B.pdf" />
+      <PdfViewer fileName="files/resume.pdf" />
     </div>
   );
 }
