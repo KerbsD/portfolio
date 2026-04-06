@@ -340,11 +340,11 @@ const WORK_LOCATION: Location = {
         },
         {
           id: 2,
-          name: "coldest-mnl.com",
+          name: "coldest-mnl.vercel.app",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://coldest-mnl.onrender.com/",
+          href: "https://coldest-mnl.vercel.app/",
           position: "top-20 left-20",
         },
         {

@@ -8,7 +8,7 @@ body {
   overflow: hidden;
   height: 100dvh;
   position: relative;
-  background-image: url("/images/pokemon-wallpaper.jpg");
+  background-image: url("/images/wallpaper.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
